@@ -1,0 +1,21 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: lto
+    ports:
+      - "5555:5432"
+
+  migrate_type:
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
