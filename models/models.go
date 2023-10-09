@@ -1,22 +1,14 @@
 package models
 
 type Ticker struct {
-	Name string `json:"ticker"`
+	Id       int    `json:"id" db:"id"`
+	Name     string `json:"ticker" db:"name"`
+	Rate     string `json:"rate" db:"rate"`
+	DiffRate string `db:"diff_rate"`
+	UpdTime  string `db:"upd_time"`
 }
 
-type Rate struct {
+type Received struct {
 	Symbol string `json:"symbol"`
 	Price  string `json:"price"`
 }
-
-var schema = `
-CREATE TABLE tick_name IF NOT EXISTS(
-    id SERIAL PRIMARY KEY,
-    ticker_name text,
-);
-
-CREATE TABLE tick_rate IF NOT EXISTS(
-    id integer PRIMARY KEY,
-	ticker_rate text,
-	FOREIGN KEY (id) REFERENCES tick_name (id) ON DELETE CASCADE
-);`

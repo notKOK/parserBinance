@@ -1,2 +1,0 @@
-DROP TABLE tick_name IF EXIST;
-DROP TABLE tick_rate IF EXIST;

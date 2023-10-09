@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2/log"
-	"parser/httpServer"
+	"parser/internal/httpServer"
 )
 
 func main() {
