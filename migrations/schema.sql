@@ -11,3 +11,4 @@ CREATE TABLE tick_r (
     ticker_id int,
     FOREIGN KEY (ticker_id) REFERENCES tick_n (id) ON DELETE CASCADE
 );
+
